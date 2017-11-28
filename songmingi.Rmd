@@ -1,13 +1,9 @@
 ---
 title: "벤처기업 설립 후 기간(년수)에 따른 성비 변화"
-author: "송민기"
-date: "2017년 11월 27일"
 output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 ##1. 요약
 벤처기업의 성비는 대부분 남초이다.
