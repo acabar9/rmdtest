@@ -94,9 +94,8 @@ data<- data %>% mutate(companyYear = as.integer(format(Sys.Date(),"%Y")) - strto
 ```
 
 -   '설립한 지 얼마나 됐는가'를 수치화 한 변수를 만든다.
--   5년 단위로 묶어 그룹화 한 변수도 함께 만든다.
 
-성비 관련 변수 생성
+성비 및 기타 변수 생성
 
 ``` r
 #사내 남성 수 변수 생성
@@ -156,6 +155,22 @@ table(is.na(data$woman))
     ## FALSE 
     ##  2048
 
+``` r
+table(is.na(data$businesstype))
+```
+
+    ## 
+    ## FALSE 
+    ##  2048
+
+``` r
+table(is.na(data$ceosex))
+```
+
+    ## 
+    ## FALSE 
+    ##  2048
+
 ##### 데이터가 유효한지
 
 ``` r
@@ -184,7 +199,7 @@ data_group5y<-data %>% mutate(companyYearBy5=ifelse(companyYear<5,"00~05",
                                                                  ifelse(companyYear<25,"21~25","26~30"))))))
 ```
 
--   이후 가공된 데이터를 다른 방향으로 사용하기 위해 미리 5년으로 묶인 변수를 만든다.
+-   이후 가공된 데이터를 직관적으로 시각화하기 위해 미리 5년으로 묶인 변수를 만든다.
 
 ### 분석 및 해석
 
