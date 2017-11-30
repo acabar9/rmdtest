@@ -52,7 +52,6 @@
 ##### 라이브러리 불러오기
 
 ``` r
-library(readxl)
 library(dplyr)
 library(ggplot2)
 ```
